@@ -11,5 +11,5 @@ Uses linked lists to compute the most common words in a text document
 Inputs a 9x9 array and decides if it is a correct sudoku board or not.
 5) WAR.cpp :
 Uses queues to play a game of 'war' with two players.
-trie.cpp:
+6) trie.cpp:
 Inplements a 'trie' data structure - similar to a binary tree - but it has 26 directions. Stores words
