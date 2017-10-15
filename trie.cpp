@@ -12,7 +12,6 @@ word :: word(){
     for (int i=0 ; i<26 ; i++){
         next[i] = nullptr;
     }
-    letter = '?';
     passedBy = 0;
 };
 class trie{
@@ -38,9 +37,8 @@ void trie :: add_word(string str){
 
     for (int i=0 ; str[i] ; i++){
 
-        (cur)->letter = str[i]; // You could check it, but checking it is probably as fast as resetting it
+        (cur)->letter = str[i]; //  checking it is probably as fast as resetting it
         ((cur)->passedBy) +=1;
-        //cout <<"Passed By this " <<  ((cur)->passedBy) << endl;
 
         if (str[i+1]){
             id = ( str[i+1] - 'a');
@@ -63,7 +61,6 @@ int trie:: count_words(string str){
 
     for (int i=0 ; str[i] ; i++){
 
-            //cout <<"Passed By this " <<  ((cur)->passedBy) << endl;
 
         if (str[i+1]){
             id = ( str[i+1] - 'a');
@@ -94,21 +91,6 @@ int main(){
         }
     }
 
-    /*
-    int numTimes;
-    trie myTrie;
-    string Werd;
-    cin >> numTimes;
-    for (int i=0 ; i<numTimes ; i++){
-        cin >> Werd;
-        //cout << Werd << endl;
-        myTrie.add_word(Werd);
-        cout << "Done!!" << endl;
-    }
-
-    cin >> Werd;
-    cout << myTrie.count_words(Werd);
-    */
 
 
 
